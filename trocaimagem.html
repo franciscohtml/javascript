@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <p id="light"></p>
+    <br>
+    <img id="MinhaImagem" src="apagado.gif" style="width: 300px;">
+
+    <script>
+
+        var tempo = 2000;
+        var timer = setInterval(cfb,tempo);
+        var img = document.querySelector("#MinhaImagem");
+        var luz = "apagada";
+
+        function cfb(){
+
+            if(luz == "acesa"){
+                img.setAttribute('src','apagado.gif');
+                luz = "apagado";
+
+        }else{
+            img.setAttribute('src','acesa.gif');
+            luz = "acesa";
+        }
+
+        incluiluz();
+
+    }
+    function incluiluz(){
+        document.getElementById("light").innerHTML = luz;
+    }
+        
+    </script>
+</body>
+</html>
