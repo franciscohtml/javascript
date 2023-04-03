@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    
+    <p id="cor"></p>
+    <p id="segundos"></p>
+
+    <img id="MinhaImagem" src="Amogus/verde.png" style="width: 400px;">
+
+    <script>
+        var tempo = 2000;
+        var timer = setInterval(controle, tempo);
+        var img = document.querySelector("#MinhaImagem");
+        var semafaro = "verde";
+
+        function controle(){
+
+            if(semafaro == "verde"){
+                img.setAttribute('src', 'Amogus/amarelo.png');
+                semafaro = "amarelo";
+                tempo = 2000;
+            }
+
+        else{
+            if(semafaro == "amarelo"){
+                img.setAttribute('src', 'Amogus/vermelho.png');
+                semafaro = "vermelho";
+                tempo = 5000;
+            }
+
+            else{
+
+            if(semafaro == "vermelho"){
+                img.setAttribute('src', 'Amogus/verde.png');
+                semafaro = "verde";
+                tempo = 1000;
+            }
+            }
+        }
+        }
+
+
+    </script>
+
+
+</body>
+</html>
